@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>湯承瑋 ❤ 吳俐穎 婚宴</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600;700;900&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C0392B;
+    --deep-red: #7B1A1A;
+    --gold: #C9A84C;
+    --light-gold: #F0D080;
+    --cream: #FDF6E3;
+    --dark: #2C1A1A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--deep-red);
+    background-image: url('IMG_0687.jpeg');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    font-family: 'Noto Sans TC', sans-serif;
+    min-height: 100vh;
+    color: var(--cream);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(10, 20, 50, 0.55) 0%,
+      rgba(10, 20, 50, 0.45) 40%,
+      rgba(10, 20, 50, 0.65) 100%
+    );
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .container { position: relative; z-index: 1; }
+
+  /* Corner decorations removed */
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px 16px 60px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 20px 0 10px;
+    position: relative;
+  }
+
+  .xi-char {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 72px;
+    color: var(--gold);
+    line-height: 1;
+    text-shadow: 0 0 30px rgba(201,168,76,0.5), 2px 2px 0 var(--deep-red);
+    animation: glow 3s ease-in-out infinite alternate;
+    display: block;
+    margin-bottom: 70px;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 20px rgba(201,168,76,0.4), 2px 2px 0 var(--deep-red); }
+    to { text-shadow: 0 0 40px rgba(201,168,76,0.8), 0 0 80px rgba(201,168,76,0.3), 2px 2px 0 var(--deep-red); }
+  }
+
+  .couple-names {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--light-gold);
+    letter-spacing: 4px;
+    margin-bottom: 4px;
+  }
+
+  .heart { color: var(--red); margin: 0 8px; }
+
+  .wedding-date {
+    font-size: 19px;
+    color: rgba(240,208,128,0.7);
+    letter-spacing: 2px;
+  }
+
+  .gold-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .gold-divider::before,
+  .gold-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+  .gold-divider span {
+    color: var(--gold);
+    font-size: 22px;
+  }
+
+  /* Cards */
+  .card {
+    background: linear-gradient(135deg, rgba(10,25,60,0.82) 0%, rgba(5,15,40,0.88) 100%);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 12px;
+    padding: 24px 20px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+
+  .card-title {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .card-title::before,
+  .card-title::after {
+    content: '◆';
+    font-size: 8px;
+    color: var(--gold);
+    opacity: 0.6;
+  }
+
+  /* Search section */
+  .search-input {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(253,246,227,0.08);
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 8px;
+    color: var(--cream);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 22px;
+    outline: none;
+    transition: all 0.3s;
+  }
+  .search-input::placeholder { color: rgba(253,246,227,0.35); }
+  .search-input:focus {
+    border-color: var(--gold);
+    background: rgba(253,246,227,0.12);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+  }
+
+  .search-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--gold) 0%, #A07830 100%);
+    border: none;
+    border-radius: 8px;
+    color: var(--dark);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .search-btn:hover {
+    background: linear-gradient(135deg, var(--light-gold) 0%, var(--gold) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+  }
+  .search-btn:active { transform: translateY(0); }
+
+  /* Result */
+  .result-box {
+    margin-top: 16px;
+    padding: 18px;
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+    animation: fadeIn 0.4s ease;
+  }
+  .result-box.found {
+    background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(192,57,43,0.15));
+    border: 1px solid rgba(201,168,76,0.5);
+    display: block;
+  }
+  .result-box.not-found {
+    background: rgba(192,57,43,0.2);
+    border: 1px solid rgba(192,57,43,0.4);
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .result-name { font-size: 20px; color: var(--light-gold); margin-bottom: 8px; }
+  .result-table {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 48px;
+    color: var(--gold);
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(201,168,76,0.5);
+  }
+  .result-table-label { font-size: 19px; color: rgba(240,208,128,0.7); margin-top: 4px; }
+  .result-msg { font-size: 20px; color: rgba(253,246,227,0.7); }
+
+  /* Timeline */
+  .timeline { list-style: none; }
+  .timeline li {
+    display: flex;
+    gap: 16px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  .timeline li:last-child { padding-bottom: 0; }
+  .timeline li::before {
+    content: '';
+    position: absolute;
+    left: 42px;
+    top: 24px;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    opacity: 0.3;
+  }
+  .timeline li:last-child::before { display: none; }
+
+  .time-badge {
+    flex-shrink: 0;
+    width: 68px;
+    text-align: right;
+    font-size: 19px;
+    color: var(--gold);
+    padding-top: 2px;
+    font-weight: 600;
+  }
+  .time-dot {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 5px;
+    box-shadow: 0 0 8px rgba(201,168,76,0.6);
+  }
+  .time-content .title {
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 2px;
+  }
+  .time-content .desc {
+    font-size: 18px;
+    color: rgba(253,246,227,0.5);
+  }
+
+  /* Menu */
+  .menu-list { list-style: none; }
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    font-size: 21px;
+    color: var(--cream);
+  }
+  .menu-item:last-child { border-bottom: none; }
+  .menu-num {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 24px;
+    color: var(--gold);
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .menu-icon { font-size: 22px; }
+
+  /* Map */
+  .venue-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .venue-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .venue-icon { font-size: 24px; flex-shrink: 0; margin-top: 1px; }
+  .venue-text { font-size: 20px; color: rgba(253,246,227,0.85); line-height: 1.6; }
+  .venue-label { font-size: 17px; color: var(--gold); letter-spacing: 1px; margin-bottom: 2px; }
+
+  .map-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 8px;
+    color: var(--gold);
+    font-family: 'Noto Serif TC', serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .map-btn:hover {
+    background: rgba(201,168,76,0.2);
+    box-shadow: 0 0 20px rgba(201,168,76,0.2);
+  }
+
+  /* Map embed placeholder */
+  .map-embed {
+    width: 100%;
+    height: 240px;
+    border-radius: 8px;
+    border: 1px solid rgba(201,168,76,0.2);
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+  .map-embed-inner {
+    text-align: center;
+    color: rgba(253,246,227,0.4);
+    font-size: 19px;
+  }
+  .map-embed-inner span { font-size: 36px; display: block; margin-bottom: 8px; }
+
+  /* Nav tabs */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    background: rgba(5,15,45,0.7);
+    padding: 4px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 10px 4px;
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+    color: rgba(253,246,227,0.5);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 17px;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+  }
+  .tab-btn.active {
+    background: linear-gradient(135deg, #0a2060, #1a3a8a);
+    color: var(--gold);
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    color: rgba(201,168,76,0.4);
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <span class="xi-char">囍</span>
+    <div class="couple-names">湯承瑋<span class="heart">❤</span>吳俐穎</div>
+    <div class="wedding-date">2026 年 九月 二十七日　午宴</div>
+  </div>
+
+  <!-- Gold divider -->
+  <div class="gold-divider"><span>✦</span></div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('search')">🔍 查桌次</button>
+    <button class="tab-btn" onclick="switchTab('schedule')">🕐 時程</button>
+    <button class="tab-btn" onclick="switchTab('menu')">🍽 菜單</button>
+    <button class="tab-btn" onclick="switchTab('map')">📍 地點</button>
+  </div>
+
+  <!-- Tab: Search -->
+  <div class="tab-panel active" id="tab-search">
+    <div class="card">
+      <div class="card-title">賓客桌次查詢</div>
+      <input class="search-input" id="nameInput" type="text" placeholder="請輸入您的姓名…" oninput="handleSearch()">
+      <button class="search-btn" onclick="searchSeat()">查　詢</button>
+      <div class="result-box" id="resultBox">
+        <div class="result-name" id="resultName"></div>
+        <div class="result-table" id="resultTable"></div>
+        <div class="result-table-label" id="resultLabel"></div>
+        <div class="result-msg" id="resultMsg"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: Schedule -->
+  <div class="tab-panel" id="tab-schedule">
+    <div class="card">
+      <div class="card-title">婚宴時程</div>
+      <ul class="timeline">
+        <li>
+          <div class="time-badge">11:30</div>
+          <div class="time-dot"></div>
+          <div class="time-content">
+            <div class="title">開放入場</div>
+            <div class="desc">請提早入席，服務人員引導帶位</div>
+          </div>
+        </li>
+        <li>
+          <div class="time-badge">12:00</div>
+          <div class="time-dot"></div>
+          <div class="time-content">
+            <div class="title">證婚儀式</div>
+            <div class="desc">交換誓言、戒指，見證幸福時刻</div>
+          </div>
+        </li>
+        <li>
+          <div class="time-badge">12:30</div>
+          <div class="time-dot"></div>
+          <div class="time-content">
+            <div class="title">開席用餐</div>
+            <div class="desc">精緻喜宴料理依序上桌</div>
+          </div>
+        </li>
+        <li>
+          <div class="time-badge">13:30</div>
+          <div class="time-dot"></div>
+          <div class="time-content">
+            <div class="title">敬酒巡桌</div>
+            <div class="desc">新人感謝各桌賓客蒞臨</div>
+          </div>
+        </li>
+        <li>
+          <div class="time-badge">14:00</div>
+          <div class="time-dot"></div>
+          <div class="time-content">
+            <div class="title">捧花儀式 ＆ 抽獎</div>
+            <div class="desc">幸運賓客帶走祝福好禮</div>
+          </div>
+        </li>
+        <li>
+          <div class="time-badge">14:30</div>
+          <div class="time-dot"></div>
+          <div class="time-content">
+            <div class="title">送客，圓滿結束</div>
+            <div class="desc">感謝各位的蒞臨祝福 🙏</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Tab: Menu -->
+  <div class="tab-panel" id="tab-menu">
+    <div class="card">
+      <div class="card-title">喜宴菜單</div>
+      <ul class="menu-list">
+        <li class="menu-item"><span class="menu-num">喜</span><span class="menu-icon">🍱</span>囍臨門拼盤 <span style="font-size: 17px;color:rgba(240,208,128,0.6);margin-left:4px;">Double Blessing</span></li>
+        <li class="menu-item"><span class="menu-num">一</span><span class="menu-icon">🦀</span>北海道干貝蟹鉗沙拉</li>
+        <li class="menu-item"><span class="menu-num">二</span><span class="menu-icon">🍡</span>花好月圓天作合</li>
+        <li class="menu-item"><span class="menu-num">三</span><span class="menu-icon">🍲</span>金湯花膠佛跳牆</li>
+        <li class="menu-item"><span class="menu-num">四</span><span class="menu-icon">🦐</span>鴛鴦蒜蒸大明蝦</li>
+        <li class="menu-item"><span class="menu-num">五</span><span class="menu-icon">🐚</span>崑崙醬燒南非鮑魚</li>
+        <li class="menu-item"><span class="menu-num">六</span><span class="menu-icon">🥩</span>美國頂級沙朗佐野菇醬</li>
+        <li class="menu-item"><span class="menu-num">七</span><span class="menu-icon">🐟</span>酸菜泡椒龍虎斑</li>
+        <li class="menu-item"><span class="menu-num">八</span><span class="menu-icon">🍗</span>花旗參野草燉雞湯</li>
+        <li class="menu-item"><span class="menu-num">九</span><span class="menu-icon">🍚</span>荷葉飄香糯米飯</li>
+        <li class="menu-item"><span class="menu-num">十</span><span class="menu-icon">🍉</span>環宇繽紛水果盤</li>
+        <li class="menu-item"><span class="menu-num">甜</span><span class="menu-icon">🍨</span>哈根達斯冰淇淋</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Tab: Map -->
+  <div class="tab-panel" id="tab-map">
+    <div class="card">
+      <div class="card-title">婚宴地點</div>
+      <div class="venue-info">
+        <div class="venue-row">
+          <span class="venue-icon">🏛</span>
+          <div class="venue-text">
+            <div class="venue-label">宴客廳</div>
+            台北圓山大飯店　松怡廳
+          </div>
+        </div>
+        <div class="venue-row">
+          <span class="venue-icon">📍</span>
+          <div class="venue-text">
+            <div class="venue-label">地址</div>
+            台北市中山區中山北路四段1號
+          </div>
+        </div>
+        <div class="venue-row">
+          <span class="venue-icon">🚇</span>
+          <div class="venue-text">
+            <div class="venue-label">交通</div>
+            搭乘捷運至「劍潭站」，轉乘圓山大飯店接駁車
+          </div>
+        </div>
+        <div class="venue-row">
+          <span class="venue-icon">🅿️</span>
+          <div class="venue-text">
+            <div class="venue-label">停車</div>
+            飯店提供停車場，建議提早抵達
+          </div>
+        </div>
+      </div>
+
+
+
+      <a class="map-btn" href="https://maps.google.com/?q=台北圓山大飯店" target="_blank">
+        📱 開啟 Google 導航
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">百年好合　永結同心</div>
+</div>
+
+<script>
+  // 範例賓客資料
+  const guests = {
+    "王大明": { table: 1, label: "主桌一" },
+    "李小華": { table: 2, label: "新郎親友桌" },
+    "陳美玲": { table: 3, label: "新娘親友桌" },
+    "張志豪": { table: 4, label: "同學桌" },
+    "林雅婷": { table: 5, label: "同事桌" },
+    "黃建國": { table: 2, label: "新郎親友桌" },
+    "吳淑芬": { table: 6, label: "長輩桌" },
+    "劉明宏": { table: 7, label: "好友桌" },
+    "蔡怡君": { table: 4, label: "同學桌" },
+    "楊文彬": { table: 8, label: "同學桌" },
+  };
+
+  function switchTab(tab) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  function handleSearch() {
+    const resultBox = document.getElementById('resultBox');
+    resultBox.className = 'result-box';
+  }
+
+  function searchSeat() {
+    const name = document.getElementById('nameInput').value.trim();
+    const resultBox = document.getElementById('resultBox');
+
+    if (!name) {
+      resultBox.className = 'result-box not-found';
+      document.getElementById('resultMsg').textContent = '請輸入您的姓名';
+      document.getElementById('resultName').textContent = '';
+      document.getElementById('resultTable').textContent = '';
+      document.getElementById('resultLabel').textContent = '';
+      return;
+    }
+
+    const guest = guests[name];
+    if (guest) {
+      resultBox.className = 'result-box found';
+      document.getElementById('resultName').textContent = name + ' 您好，歡迎蒞臨！';
+      document.getElementById('resultTable').textContent = guest.table;
+      document.getElementById('resultLabel').textContent = '第 ' + guest.table + ' 桌　' + guest.label;
+      document.getElementById('resultMsg').textContent = '';
+    } else {
+      resultBox.className = 'result-box not-found';
+      document.getElementById('resultMsg').textContent = '找不到此姓名，請洽詢現場服務人員 🙏';
+      document.getElementById('resultName').textContent = '';
+      document.getElementById('resultTable').textContent = '';
+      document.getElementById('resultLabel').textContent = '';
+    }
+  }
+
+  document.getElementById('nameInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') searchSeat();
+  });
+</script>
+</body>
+</html>

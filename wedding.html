@@ -16,11 +16,7 @@
     --dark: #2C1A1A;
   }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
     background-color: var(--deep-red);
@@ -55,7 +51,6 @@
     padding: 20px 16px 60px;
   }
 
-  /* Header */
   .header {
     text-align: center;
     padding: 20px 0 10px;
@@ -74,12 +69,8 @@
   }
 
   @keyframes glow {
-    from {
-      text-shadow: 0 0 20px rgba(201,168,76,0.4), 2px 2px 0 var(--deep-red);
-    }
-    to {
-      text-shadow: 0 0 40px rgba(201,168,76,0.8), 0 0 80px rgba(201,168,76,0.3), 2px 2px 0 var(--deep-red);
-    }
+    from { text-shadow: 0 0 20px rgba(201,168,76,0.4), 2px 2px 0 var(--deep-red); }
+    to { text-shadow: 0 0 40px rgba(201,168,76,0.8), 0 0 80px rgba(201,168,76,0.3), 2px 2px 0 var(--deep-red); }
   }
 
   .couple-names {
@@ -90,10 +81,7 @@
     margin-bottom: 4px;
   }
 
-  .heart {
-    color: var(--red);
-    margin: 0 8px;
-  }
+  .heart { color: var(--red); margin: 0 8px; }
 
   .wedding-date {
     font-size: 19px;
@@ -116,12 +104,8 @@
     background: linear-gradient(to right, transparent, var(--gold), transparent);
   }
 
-  .gold-divider span {
-    color: var(--gold);
-    font-size: 22px;
-  }
+  .gold-divider span { color: var(--gold); font-size: 22px; }
 
-  /* Cards */
   .card {
     background: linear-gradient(135deg, rgba(10,25,60,0.82) 0%, rgba(5,15,40,0.88) 100%);
     border: 1px solid rgba(201,168,76,0.35);
@@ -162,7 +146,6 @@
     opacity: 0.6;
   }
 
-  /* Search section */
   .search-hint {
     margin-bottom: 12px;
     color: rgba(253,246,227,0.68);
@@ -171,9 +154,7 @@
     text-align: center;
   }
 
-  .seat-search-box {
-    position: relative;
-  }
+  .seat-search-box { position: relative; }
 
   .search-input {
     width: 100%;
@@ -189,9 +170,7 @@
     text-align: center;
   }
 
-  .search-input::placeholder {
-    color: rgba(253,246,227,0.35);
-  }
+  .search-input::placeholder { color: rgba(253,246,227,0.35); }
 
   .search-input:focus {
     border-color: var(--gold);
@@ -221,14 +200,10 @@
     cursor: pointer;
   }
 
-  .guest-result-item:last-child {
-    border-bottom: none;
-  }
+  .guest-result-item:last-child { border-bottom: none; }
 
   .guest-result-item:hover,
-  .guest-result-item:active {
-    background: rgba(201,168,76,0.22);
-  }
+  .guest-result-item:active { background: rgba(201,168,76,0.22); }
 
   .no-result,
   .too-many-result,
@@ -241,7 +216,6 @@
     text-align: center;
   }
 
-  /* Result */
   .result-box {
     margin-top: 16px;
     padding: 18px;
@@ -264,21 +238,11 @@
   }
 
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
-  .result-name {
-    font-size: 20px;
-    color: var(--light-gold);
-    margin-bottom: 8px;
-  }
+  .result-name { font-size: 20px; color: var(--light-gold); margin-bottom: 8px; }
 
   .result-table {
     font-family: 'Ma Shan Zheng', cursive;
@@ -294,16 +258,9 @@
     margin-top: 4px;
   }
 
-  .result-msg {
-    font-size: 20px;
-    color: rgba(253,246,227,0.7);
-  }
+  .result-msg { font-size: 20px; color: rgba(253,246,227,0.7); }
 
-  /* Seat map */
-  .seat-map-area {
-    margin-top: 22px;
-    animation: fadeIn 0.4s ease;
-  }
+  .seat-map-area { margin-top: 22px; animation: fadeIn 0.4s ease; }
 
   .seat-map-title {
     margin-bottom: 10px;
@@ -344,25 +301,14 @@
   }
 
   @keyframes markerPulse {
-    0% {
-      transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-      transform: translate(-50%, -50%) scale(1.13);
-    }
-    100% {
-      transform: translate(-50%, -50%) scale(1);
-    }
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.13); }
+    100% { transform: translate(-50%, -50%) scale(1); }
   }
 
-  .hidden {
-    display: none !important;
-  }
+  .hidden { display: none !important; }
 
-  /* Timeline */
-  .timeline {
-    list-style: none;
-  }
+  .timeline { list-style: none; }
 
   .timeline li {
     display: flex;
@@ -371,9 +317,7 @@
     position: relative;
   }
 
-  .timeline li:last-child {
-    padding-bottom: 0;
-  }
+  .timeline li:last-child { padding-bottom: 0; }
 
   .timeline li::before {
     content: '';
@@ -386,9 +330,7 @@
     opacity: 0.3;
   }
 
-  .timeline li:last-child::before {
-    display: none;
-  }
+  .timeline li:last-child::before { display: none; }
 
   .time-badge {
     flex-shrink: 0;
@@ -417,15 +359,9 @@
     margin-bottom: 2px;
   }
 
-  .time-content .desc {
-    font-size: 18px;
-    color: rgba(253,246,227,0.5);
-  }
+  .time-content .desc { font-size: 18px; color: rgba(253,246,227,0.5); }
 
-  /* Menu */
-  .menu-list {
-    list-style: none;
-  }
+  .menu-list { list-style: none; }
 
   .menu-item {
     display: flex;
@@ -437,9 +373,7 @@
     color: var(--cream);
   }
 
-  .menu-item:last-child {
-    border-bottom: none;
-  }
+  .menu-item:last-child { border-bottom: none; }
 
   .menu-num {
     font-family: 'Ma Shan Zheng', cursive;
@@ -450,11 +384,8 @@
     flex-shrink: 0;
   }
 
-  .menu-icon {
-    font-size: 22px;
-  }
+  .menu-icon { font-size: 22px; }
 
-  /* Map */
   .venue-info {
     display: flex;
     flex-direction: column;
@@ -512,7 +443,6 @@
     box-shadow: 0 0 20px rgba(201,168,76,0.2);
   }
 
-  /* Nav tabs */
   .tabs {
     display: flex;
     gap: 4px;
@@ -542,15 +472,9 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   }
 
-  .tab-panel {
-    display: none;
-  }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
 
-  .tab-panel.active {
-    display: block;
-  }
-
-  /* Footer */
   .footer {
     text-align: center;
     padding: 20px 0;
@@ -563,18 +487,14 @@
 
 <body>
 <div class="container">
-
-  <!-- Header -->
   <div class="header">
     <span class="xi-char">囍</span>
     <div class="couple-names">湯承瑋<span class="heart">❤</span>吳俐穎</div>
     <div class="wedding-date">2026 年 九月 二十七日　午宴</div>
   </div>
 
-  <!-- Gold divider -->
   <div class="gold-divider"><span>✦</span></div>
 
-  <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('search', this)">🔍 查桌次</button>
     <button class="tab-btn" onclick="switchTab('schedule', this)">🕐 時程</button>
@@ -582,14 +502,11 @@
     <button class="tab-btn" onclick="switchTab('map', this)">📍 地點</button>
   </div>
 
-  <!-- Tab: Search -->
   <div class="tab-panel active" id="tab-search">
     <div class="card">
       <div class="card-title">賓客桌次查詢</div>
 
-      <div class="search-hint">
-        請輸入姓名，並從下方清單選擇您的名字。
-      </div>
+      <div class="search-hint">請輸入姓名，並從下方清單選擇您的名字。</div>
 
       <div class="seat-search-box">
         <input
@@ -620,64 +537,20 @@
     </div>
   </div>
 
-  <!-- Tab: Schedule -->
   <div class="tab-panel" id="tab-schedule">
     <div class="card">
       <div class="card-title">婚宴時程</div>
       <ul class="timeline">
-        <li>
-          <div class="time-badge">11:30</div>
-          <div class="time-dot"></div>
-          <div class="time-content">
-            <div class="title">開放入場</div>
-            <div class="desc">請提早入席，服務人員引導帶位</div>
-          </div>
-        </li>
-        <li>
-          <div class="time-badge">12:00</div>
-          <div class="time-dot"></div>
-          <div class="time-content">
-            <div class="title">證婚儀式</div>
-            <div class="desc">交換誓言、戒指，見證幸福時刻</div>
-          </div>
-        </li>
-        <li>
-          <div class="time-badge">12:30</div>
-          <div class="time-dot"></div>
-          <div class="time-content">
-            <div class="title">開席用餐</div>
-            <div class="desc">精緻喜宴料理依序上桌</div>
-          </div>
-        </li>
-        <li>
-          <div class="time-badge">13:30</div>
-          <div class="time-dot"></div>
-          <div class="time-content">
-            <div class="title">敬酒巡桌</div>
-            <div class="desc">新人感謝各桌賓客蒞臨</div>
-          </div>
-        </li>
-        <li>
-          <div class="time-badge">14:00</div>
-          <div class="time-dot"></div>
-          <div class="time-content">
-            <div class="title">捧花儀式 ＆ 抽獎</div>
-            <div class="desc">幸運賓客帶走祝福好禮</div>
-          </div>
-        </li>
-        <li>
-          <div class="time-badge">14:30</div>
-          <div class="time-dot"></div>
-          <div class="time-content">
-            <div class="title">送客，圓滿結束</div>
-            <div class="desc">感謝各位的蒞臨祝福 🙏</div>
-          </div>
-        </li>
+        <li><div class="time-badge">11:30</div><div class="time-dot"></div><div class="time-content"><div class="title">開放入場</div><div class="desc">請提早入席，服務人員引導帶位</div></div></li>
+        <li><div class="time-badge">12:00</div><div class="time-dot"></div><div class="time-content"><div class="title">證婚儀式</div><div class="desc">交換誓言、戒指，見證幸福時刻</div></div></li>
+        <li><div class="time-badge">12:30</div><div class="time-dot"></div><div class="time-content"><div class="title">開席用餐</div><div class="desc">精緻喜宴料理依序上桌</div></div></li>
+        <li><div class="time-badge">13:30</div><div class="time-dot"></div><div class="time-content"><div class="title">敬酒巡桌</div><div class="desc">新人感謝各桌賓客蒞臨</div></div></li>
+        <li><div class="time-badge">14:00</div><div class="time-dot"></div><div class="time-content"><div class="title">捧花儀式 ＆ 抽獎</div><div class="desc">幸運賓客帶走祝福好禮</div></div></li>
+        <li><div class="time-badge">14:30</div><div class="time-dot"></div><div class="time-content"><div class="title">送客，圓滿結束</div><div class="desc">感謝各位的蒞臨祝福 🙏</div></div></li>
       </ul>
     </div>
   </div>
 
-  <!-- Tab: Menu -->
   <div class="tab-panel" id="tab-menu">
     <div class="card">
       <div class="card-title">喜宴菜單</div>
@@ -698,75 +571,25 @@
     </div>
   </div>
 
-  <!-- Tab: Map -->
   <div class="tab-panel" id="tab-map">
     <div class="card">
       <div class="card-title">婚宴地點</div>
       <div class="venue-info">
-        <div class="venue-row">
-          <span class="venue-icon">🏛</span>
-          <div class="venue-text">
-            <div class="venue-label">宴客廳</div>
-            台北圓山大飯店　崑崙廳(12樓)
-          </div>
-        </div>
-
-        <div class="venue-row">
-          <span class="venue-icon">🚬</span>
-          <div class="venue-text">
-            <div class="venue-label">吸菸區</div>
-            台北圓山大飯店　吸菸區(11樓)
-          </div>
-        </div>
-
-        <div class="venue-row">
-          <span class="venue-icon">📍</span>
-          <div class="venue-text">
-            <div class="venue-label">地址</div>
-            台北市中山區中山北路四段1號
-          </div>
-        </div>
-
-        <div class="venue-row">
-          <span class="venue-icon">🚇</span>
-          <div class="venue-text">
-            <div class="venue-label">捷運接駁（免費）</div>
-            捷運圓山站 1號出口，沿玉門街直行約100公尺，見飯店接駁車站牌候車，每20–30分鐘一班
-          </div>
-        </div>
-
-        <div class="venue-row">
-          <span class="venue-icon">🚌</span>
-          <div class="venue-text">
-            <div class="venue-label">劍潭站接駁（週六有營運）</div>
-            捷運劍潭站 1號出口前，中山北路方向站牌候車
-          </div>
-        </div>
-
-        <div class="venue-row">
-          <span class="venue-icon">🅿️</span>
-          <div class="venue-text">
-            <div class="venue-label">停車</div>
-            飯店提供停車場，建議提早抵達
-          </div>
-        </div>
-
-        <!-- 接駁車資訊 -->
+        <div class="venue-row"><span class="venue-icon">🏛</span><div class="venue-text"><div class="venue-label">宴客廳</div>台北圓山大飯店　崑崙廳(12樓)</div></div>
+        <div class="venue-row"><span class="venue-icon">🚬</span><div class="venue-text"><div class="venue-label">吸菸區</div>台北圓山大飯店　吸菸區(11樓)</div></div>
+        <div class="venue-row"><span class="venue-icon">📍</span><div class="venue-text"><div class="venue-label">地址</div>台北市中山區中山北路四段1號</div></div>
+        <div class="venue-row"><span class="venue-icon">🚇</span><div class="venue-text"><div class="venue-label">捷運接駁（免費）</div>捷運圓山站 1號出口，沿玉門街直行約100公尺，見飯店接駁車站牌候車，每20–30分鐘一班</div></div>
+        <div class="venue-row"><span class="venue-icon">🚌</span><div class="venue-text"><div class="venue-label">劍潭站接駁（週六有營運）</div>捷運劍潭站 1號出口前，中山北路方向站牌候車</div></div>
+        <div class="venue-row"><span class="venue-icon">🅿️</span><div class="venue-text"><div class="venue-label">停車</div>飯店提供停車場，建議提早抵達</div></div>
         <div style="margin-top:16px;">
           <div class="card-title">免費接駁車時刻表</div>
           <img src="shuttle3.jpeg" style="width:100%;border-radius:8px;margin-bottom:8px;" alt="接駁車時刻表一">
           <img src="shuttle1.jpeg" style="width:100%;border-radius:8px;margin-bottom:8px;" alt="接駁車時刻表二">
           <img src="shuttle2.jpeg" style="width:100%;border-radius:8px;margin-bottom:16px;" alt="接駁車時刻表三">
-
-          <a class="map-btn" href="https://www.grand-hotel.org/TW/official/about-traffic.aspx?gh=TP" target="_blank">
-            🚌 圓山大飯店官網交通資訊
-          </a>
+          <a class="map-btn" href="https://www.grand-hotel.org/TW/official/about-traffic.aspx?gh=TP" target="_blank">🚌 圓山大飯店官網交通資訊</a>
         </div>
       </div>
-
-      <a class="map-btn" href="https://maps.google.com/?q=台北圓山大飯店" target="_blank">
-        📱 開啟 Google 導航
-      </a>
+      <a class="map-btn" href="https://maps.google.com/?q=台北圓山大飯店" target="_blank">📱 開啟 Google 導航</a>
     </div>
   </div>
 
@@ -774,42 +597,29 @@
 </div>
 
 <script>
-  /*
-    Google 試算表 CSV 發佈連結。
-    試算表第一列建議使用：
-    name,table,label,category,note
-
-    也支援中文欄位：
-    姓名,桌號,桌名,類別,備註
-  */
   const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRSR8QBUA3GMlzii123gucxvO4zyE57HqWoyii1RlehdftpTTVIOWLehlwfd7SSS0M3HAoEE1qfuWSQ/pub?output=csv";
 
   let guests = [];
 
-  /*
-    桌位座標，單位是百分比。
-    這組是依照目前 seat_map.png 版本預估。
-    如果高亮圈圈有偏移，只要微調 x / y。
-  */
   const tablePositions = {
-    "主桌": { x: 50, y: 26 },
+    "主桌": { x: 50, y: 25 },
 
-    "2": { x: 34, y: 34 },
-    "6": { x: 34, y: 42 },
-    "8": { x: 34, y: 50 },
-    "10": { x: 34, y: 58 },
-    "12": { x: 34, y: 66 },
-    "16": { x: 34, y: 74 },
-    "18": { x: 34, y: 82 },
+    "2":  { x: 34, y: 32 },
+    "6":  { x: 34, y: 39 },
+    "8":  { x: 34, y: 46 },
+    "10": { x: 34, y: 54 },
+    "12": { x: 34, y: 61 },
+    "15": { x: 34, y: 68 },
+    "16": { x: 34, y: 76 },
+    "18": { x: 34, y: 84 },
 
-    "1": { x: 64, y: 34 },
-    "3": { x: 64, y: 42 },
-    "5": { x: 64, y: 50 },
-    "7": { x: 64, y: 58 },
-    "9": { x: 64, y: 66 },
-    "11": { x: 64, y: 74 },
-    "13": { x: 64, y: 82 },
-    "15": { x: 64, y: 90 }
+    "1":  { x: 64, y: 32 },
+    "3":  { x: 64, y: 39 },
+    "5":  { x: 64, y: 46 },
+    "7":  { x: 64, y: 54 },
+    "9":  { x: 64, y: 61 },
+    "11": { x: 64, y: 68 },
+    "13": { x: 64, y: 76 }
   };
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -820,7 +630,6 @@
       input.addEventListener("keydown", function (e) {
         if (e.key === "Enter") {
           const firstItem = document.querySelector(".guest-result-item");
-
           if (firstItem) {
             firstItem.click();
           } else {
@@ -833,7 +642,6 @@
     document.addEventListener("click", function (e) {
       const searchBox = document.querySelector(".seat-search-box");
       const resultsBox = document.getElementById("searchResults");
-
       if (searchBox && resultsBox && !searchBox.contains(e.target)) {
         resultsBox.innerHTML = "";
       }
@@ -850,13 +658,8 @@
     });
 
     const targetPanel = document.getElementById("tab-" + tab);
-    if (targetPanel) {
-      targetPanel.classList.add("active");
-    }
-
-    if (buttonElement) {
-      buttonElement.classList.add("active");
-    }
+    if (targetPanel) targetPanel.classList.add("active");
+    if (buttonElement) buttonElement.classList.add("active");
   }
 
   async function loadGuestsFromSheet() {
@@ -864,18 +667,23 @@
 
     try {
       const response = await fetch(SHEET_CSV_URL + "&cacheBust=" + Date.now());
-
-      if (!response.ok) {
-        throw new Error("Google Sheet CSV 讀取失敗");
-      }
+      if (!response.ok) throw new Error("Google Sheet CSV 讀取失敗，HTTP 狀態：" + response.status);
 
       const csvText = await response.text();
       guests = parseCsvToGuests(csvText);
-
       console.log("桌次資料載入完成：", guests);
-    } catch (error) {
-      console.error(error);
 
+      if (!guests || guests.length === 0) {
+        if (resultsBox) {
+          resultsBox.innerHTML = `
+            <div class="no-result">
+              桌次資料已讀取，但沒有解析到有效名單。請確認試算表至少有 table、label、name 欄位，且姓名與桌號都有填寫。
+            </div>
+          `;
+        }
+      }
+    } catch (error) {
+      console.error("桌次資料載入失敗：", error);
       if (resultsBox) {
         resultsBox.innerHTML = `
           <div class="no-result">
@@ -886,10 +694,6 @@
     }
   }
 
-  /*
-    CSV parser：
-    支援逗號、雙引號、換行。
-  */
   function parseCsv(csvText) {
     const rows = [];
     let row = [];
@@ -918,10 +722,7 @@
       }
 
       if ((char === "\n" || char === "\r") && !insideQuotes) {
-        if (char === "\r" && nextChar === "\n") {
-          i++;
-        }
-
+        if (char === "\r" && nextChar === "\n") i++;
         row.push(value);
         rows.push(row);
         row = [];
@@ -942,27 +743,17 @@
 
   function parseCsvToGuests(csvText) {
     const rows = parseCsv(csvText)
-      .map(function (row) {
-        return row.map(function (cell) {
-          return String(cell || "").trim();
-        });
-      })
-      .filter(function (row) {
-        return row.some(function (cell) {
-          return cell !== "";
-        });
-      });
+      .map(function (row) { return row.map(function (cell) { return String(cell || "").trim(); }); })
+      .filter(function (row) { return row.some(function (cell) { return cell !== ""; }); });
 
     if (rows.length <= 1) {
       console.warn("Google Sheet 沒有有效資料");
       return [];
     }
 
-    const headers = rows[0].map(function (header) {
-      return normalizeHeader(header);
-    });
+    const headers = rows[0].map(function (header) { return normalizeHeader(header); });
 
-    const nameIndex = findHeaderIndex(headers, ["name", "姓名", "賓客", "賓客姓名"]);
+    const nameIndex = findHeaderIndex(headers, ["name", "姓名", "賓客", "賓客姓名", "名字"]);
     const tableIndex = findHeaderIndex(headers, ["table", "桌號", "桌次", "桌"]);
     const labelIndex = findHeaderIndex(headers, ["label", "桌名", "分類", "顯示分類"]);
     const categoryIndex = findHeaderIndex(headers, ["category", "類別"]);
@@ -983,37 +774,23 @@
           note: noteIndex >= 0 ? (row[noteIndex] || "") : ""
         };
       })
-      .filter(function (guest) {
-        return guest.name !== "" && guest.table !== "";
-      });
+      .filter(function (guest) { return guest.name !== "" && guest.table !== ""; });
   }
 
   function normalizeHeader(header) {
-    return String(header || "")
-      .trim()
-      .replace(/\s+/g, "")
-      .toLowerCase();
+    return String(header || "").trim().replace(/\s+/g, "").toLowerCase();
   }
 
   function findHeaderIndex(headers, candidates) {
-    const normalizedCandidates = candidates.map(function (item) {
-      return normalizeHeader(item);
-    });
-
+    const normalizedCandidates = candidates.map(function (item) { return normalizeHeader(item); });
     for (let i = 0; i < headers.length; i++) {
-      if (normalizedCandidates.includes(headers[i])) {
-        return i;
-      }
+      if (normalizedCandidates.includes(headers[i])) return i;
     }
-
     return -1;
   }
 
   function normalizeText(text) {
-    return String(text || "")
-      .trim()
-      .replace(/\s+/g, "")
-      .toLowerCase();
+    return String(text || "").trim().replace(/\s+/g, "").toLowerCase();
   }
 
   function searchGuests() {
@@ -1022,29 +799,17 @@
     const resultBox = document.getElementById("resultBox");
     const marker = document.getElementById("tableMarker");
 
-    if (!input || !resultsBox || !resultBox) {
-      return;
-    }
+    if (!input || !resultsBox || !resultBox) return;
 
     const keyword = normalizeText(input.value);
-
     resultsBox.innerHTML = "";
     resetResultBox();
 
-    if (marker) {
-      marker.classList.add("hidden");
-    }
-
-    if (!keyword) {
-      return;
-    }
+    if (marker) marker.classList.add("hidden");
+    if (!keyword) return;
 
     if (!guests || guests.length === 0) {
-      resultsBox.innerHTML = `
-        <div class="loading-result">
-          桌次資料載入中，請稍候。
-        </div>
-      `;
+      resultsBox.innerHTML = `<div class="loading-result">桌次資料載入中，請稍候。</div>`;
       return;
     }
 
@@ -1064,13 +829,11 @@
       const item = document.createElement("div");
       item.className = "guest-result-item";
       item.textContent = guest.name;
-
       item.addEventListener("click", function () {
         input.value = guest.name;
         resultsBox.innerHTML = "";
         showSeatResult(guest);
       });
-
       resultsBox.appendChild(item);
     });
 
@@ -1096,31 +859,20 @@
     resultBox.className = "result-box found";
     resultName.textContent = guest.name + " 您好，歡迎蒞臨！";
     resultTable.textContent = tableText === "主桌" ? "主桌" : tableText;
-    resultLabel.textContent = tableText === "主桌"
-      ? labelText
-      : "第 " + tableText + " 桌　" + labelText;
+    resultLabel.textContent = tableText === "主桌" ? labelText : "第 " + tableText + " 桌　" + labelText;
     resultMsg.textContent = "";
 
-    if (seatMapArea) {
-      seatMapArea.classList.remove("hidden");
-    }
-
+    if (seatMapArea) seatMapArea.classList.remove("hidden");
     highlightTable(tableText);
 
     setTimeout(function () {
-      if (seatMapArea) {
-        seatMapArea.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      }
+      if (seatMapArea) seatMapArea.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 150);
   }
 
   function highlightTable(table) {
     const marker = document.getElementById("tableMarker");
     const position = tablePositions[String(table).trim()];
-
     if (!marker || !position) {
       console.warn("找不到桌位座標：", table);
       return;
@@ -1135,9 +887,7 @@
     const resultBox = document.getElementById("resultBox");
     const seatMapArea = document.getElementById("seatMapArea");
 
-    if (!resultBox) {
-      return;
-    }
+    if (!resultBox) return;
 
     resultBox.className = "result-box";
     document.getElementById("resultName").textContent = "";
@@ -1145,9 +895,7 @@
     document.getElementById("resultLabel").textContent = "";
     document.getElementById("resultMsg").textContent = "";
 
-    if (seatMapArea) {
-      seatMapArea.classList.add("hidden");
-    }
+    if (seatMapArea) seatMapArea.classList.add("hidden");
   }
 </script>
 </body>

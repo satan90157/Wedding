@@ -819,6 +819,16 @@
     return String(text || "").trim().replace(/\s+/g, "").toLowerCase();
   }
 
+  function formatTableForList(table) {
+  const tableText = String(table || "").trim();
+
+  if (tableText === "主桌") {
+    return "主桌";
+  }
+
+  return "第 " + tableText + " 桌";
+}
+
   function searchGuests() {
     const input = document.getElementById("nameInput");
     const resultsBox = document.getElementById("searchResults");

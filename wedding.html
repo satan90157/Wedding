@@ -287,16 +287,20 @@
   }
 
   .table-marker {
-     position: absolute;
+      position: absolute;
+  z-index: 999;
   width: 12%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  border: 4px solid #00E5FF;
-  background: rgba(0, 229, 255, 0.12);
+
+  /* 玉色高亮 */
+  border: 4px solid #00D084;
+  background: rgba(0, 208, 132, 0.18);
   box-shadow:
     0 0 0 4px rgba(255, 255, 255, 0.95),
-    0 0 18px rgba(0, 229, 255, 1),
-    0 0 36px rgba(0, 229, 255, 0.9);
+    0 0 18px rgba(0, 208, 132, 1),
+    0 0 36px rgba(0, 208, 132, 0.9);
+
   transform: translate(-50%, -50%);
   pointer-events: none;
   animation: markerPulse 1.05s ease-in-out infinite;

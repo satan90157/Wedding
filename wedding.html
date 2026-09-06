@@ -600,6 +600,7 @@
   const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRSR8QBUA3GMlzii123gucxvO4zyE57HqWoyii1RlehdftpTTVIOWLehlwfd7SSS0M3HAoEE1qfuWSQ/pub?output=csv";
 
   let guests = [];
+  let guestsLoadState = "loading"; // loading | loaded | empty | error
 
   const tablePositions = {
     "主桌": { x: 50, y: 25 },
@@ -663,36 +664,55 @@
   }
 
   async function loadGuestsFromSheet() {
-    const resultsBox = document.getElementById("searchResults");
+  const resultsBox = document.getElementById("searchResults");
 
-    try {
-      const response = await fetch(SHEET_CSV_URL + "&cacheBust=" + Date.now());
-      if (!response.ok) throw new Error("Google Sheet CSV 讀取失敗，HTTP 狀態：" + response.status);
+  guestsLoadState = "loading";
 
-      const csvText = await response.text();
-      guests = parseCsvToGuests(csvText);
-      console.log("桌次資料載入完成：", guests);
+  try {
+    const response = await fetch(SHEET_CSV_URL + "&cacheBust=" + Date.now());
 
-      if (!guests || guests.length === 0) {
-        if (resultsBox) {
-          resultsBox.innerHTML = `
-            <div class="no-result">
-              桌次資料已讀取，但沒有解析到有效名單。請確認試算表至少有 table、label、name 欄位，且姓名與桌號都有填寫。
-            </div>
-          `;
-        }
-      }
-    } catch (error) {
-      console.error("桌次資料載入失敗：", error);
+    if (!response.ok) {
+      throw new Error("Google Sheet CSV 讀取失敗，HTTP 狀態：" + response.status);
+    }
+
+    const csvText = await response.text();
+
+    console.log("CSV 原始內容：");
+    console.log(csvText);
+
+    guests = parseCsvToGuests(csvText);
+
+    console.log("桌次資料載入完成：", guests);
+
+    if (!guests || guests.length === 0) {
+      guestsLoadState = "empty";
+
       if (resultsBox) {
         resultsBox.innerHTML = `
           <div class="no-result">
-            桌次資料載入失敗，請稍後再試或洽現場服務人員。
+            桌次資料已讀取，但沒有解析到有效名單。請確認姓名與桌號都有填寫。
           </div>
         `;
       }
+
+      return;
+    }
+
+    guestsLoadState = "loaded";
+  } catch (error) {
+    guestsLoadState = "error";
+
+    console.error("桌次資料載入失敗：", error);
+
+    if (resultsBox) {
+      resultsBox.innerHTML = `
+        <div class="no-result">
+          桌次資料載入失敗，請洽現場服務人員。
+        </div>
+      `;
     }
   }
+}
 
   function parseCsv(csvText) {
     const rows = [];
@@ -809,9 +829,28 @@
     if (!keyword) return;
 
     if (!guests || guests.length === 0) {
-      resultsBox.innerHTML = `<div class="loading-result">桌次資料載入中，請稍候。</div>`;
-      return;
+    if (guestsLoadState === "loading") {
+      resultsBox.innerHTML = `
+        <div class="loading-result">
+          桌次資料載入中，請稍候。
+        </div>
+      `;
+    } else if (guestsLoadState === "error") {
+      resultsBox.innerHTML = `
+        <div class="no-result">
+          桌次資料載入失敗，請洽現場服務人員。
+        </div>
+      `;
+    } else {
+      resultsBox.innerHTML = `
+        <div class="no-result">
+          目前沒有可查詢的桌次資料。
+        </div>
+      `;
     }
+  
+    return;
+  }
 
     const matchedGuests = guests.filter(function (guest) {
       return normalizeText(guest.name).includes(keyword);

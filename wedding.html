@@ -873,7 +873,7 @@
     displayGuests.forEach(function (guest) {
       const item = document.createElement("div");
       item.className = "guest-result-item";
-      item.textContent = guest.name;
+      item.textContent = guest.name  + "　｜　" + formatTableForList(guest.table);
       item.addEventListener("click", function () {
         input.value = guest.name;
         resultsBox.innerHTML = "";
